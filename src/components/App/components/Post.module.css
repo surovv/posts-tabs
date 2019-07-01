@@ -1,0 +1,37 @@
+.root, .postData {
+  margin: 14px 0;
+  padding: 14px;
+  border: 1px solid #d3d6db;
+  flex: 1 100%;
+  background-color: white;
+  color: #343434;
+  border-radius: 4px;
+}
+
+.root .postData {
+  margin: 0 0 50px 0;
+  padding: 0;
+  border: none;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  margin: 14px 0 10px;
+  font-size: 12px;
+}
+
+.likes {
+  display: flex;
+  align-items: center;
+}
+
+.likeBtn {
+  composes: btn from './NewPost.module.css';
+  font-size: 12px;
+  padding: 4px 0;
+  width: 60px;
+  height: 38px;
+  margin: 0 10px 0 0;
+  background-color: pink;
+}

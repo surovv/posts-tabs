@@ -1,0 +1,44 @@
+.root {
+  background-color: #e9ebee;
+  min-height: 100vh;
+  padding-bottom: 40px;
+}
+
+:global .react-tabs__tab-list {
+  text-align: center;
+  border-bottom: 1px solid #d3d6db;
+  background-color: white;
+}
+
+:global .react-tabs__tab {
+  color: gray;
+  font-weight: 500;
+  padding: 12px;
+  bottom: 0;
+}
+:global .react-tabs__tab:focus {
+  box-shadow: none;
+  border-color: transparent;
+  outline: none;
+}
+
+:global .react-tabs__tab:focus:after {
+  display: none;
+}
+
+
+.selectedTab {
+  color: #279af1;
+  font-weight: 600;
+}
+
+.newPostArea, .posts {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 640px;
+  margin: 20px auto 0;
+}
+
+.title {
+  width: 100%;
+}
