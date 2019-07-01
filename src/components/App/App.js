@@ -6,6 +6,8 @@ import {
 
 import NewPost from './components/NewPost';
 import Post from './components/Post';
+import PostData from './components/PostData';
+import Comment from './components/Comment';
 
 import usePosts from './hooks/usePosts';
 import useComments from './hooks/useComments';
@@ -47,9 +49,28 @@ const App = () => {
         <TabPanel>
           <div className={styles.posts}>
             <h2 className={styles.title}>Posts</h2>
+            {posts.filter(post => post.liked).map(post => (
+              <PostData
+                key={post.uid}
+                post={post}
+                updatePostData={updatePost}
+              />
+            ))}
 
             <h2 className={styles.title}>Comments</h2>
-
+            {Object.entries(comments)
+              .map(([postUid, cmmnts]) => (
+                cmmnts
+                  .filter(comment => comment.liked)
+                  .map(comment => (
+                    <Comment
+                      key={comment.uid}
+                      postUid={postUid}
+                      comment={comment}
+                      updateComment={updateComment}
+                    />
+                  ))
+              ))}
           </div>
         </TabPanel>
       </Tabs>
