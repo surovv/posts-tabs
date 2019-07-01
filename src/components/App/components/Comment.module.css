@@ -1,0 +1,8 @@
+.root {
+  composes: root from './Post.module.css';
+  display: flex;
+}
+
+.likeBtn {
+  composes: likeBtn from './Post.module.css';
+}

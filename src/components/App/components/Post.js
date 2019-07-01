@@ -2,6 +2,7 @@ import React, { memo } from 'react';
 import PropTypes from 'prop-types';
 
 import PostData from './PostData';
+import PostComments from './PostComments';
 
 import { post as postType, comment as commentType } from './Post.types';
 
@@ -15,6 +16,13 @@ const Post = ({
     <PostData
       post={post}
       updatePostData={updatePostData}
+    />
+    <PostComments
+      comments={comments}
+      postUid={post.uid}
+      addComment={addComment}
+      updateComment={updateComment}
+      allowCommenting
     />
   </div>
 );

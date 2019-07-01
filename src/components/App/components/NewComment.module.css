@@ -1,0 +1,16 @@
+.root {
+  display: flex;
+}
+
+.input {
+  composes: input from './NewPost.module.css';
+  margin-right: 20px;
+  padding: 4px 12px;
+}
+
+.btn {
+  composes: btn from './NewPost.module.css';
+  font-size: 13px;
+  padding: 4px 10px;
+  margin: 0;
+}
